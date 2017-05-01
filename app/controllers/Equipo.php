@@ -33,6 +33,12 @@ class Equipo extends Controller{
 
     echo json_encode($arreglo);
   }
+
+  public function equipos_division($id)
+  {
+    $response = $this->model->equipos($id);
+    return $response;
+  }
 }
 
  ?>

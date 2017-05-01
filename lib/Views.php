@@ -16,11 +16,9 @@ class Views
     require APP_PATH.'views/'.DFT.'footer.php';
   }
 
-  function renderS($controller, $view, $array,$datos){
+  function render2($controller, $view, $array){
     $controllers = get_class($controller);
-    require APP_PATH.'views/'.DFT.'head.php';
     require APP_PATH.'views/'.$controllers.'/'.$view.'.php';
-    require APP_PATH.'views/'.DFT.'footer.php';
   }
 }
 

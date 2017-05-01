@@ -77,6 +77,11 @@
   	  </div>
   	</div>
   	</header>
+    <div class="container">
+      <?php foreach ($array as  $value) { ?>
+        <h4><?= $value->nombre ?></h4>
+      <?php } ?>
+    </div>
     <!-- Footer -->
         <footer>
             <div class="container">

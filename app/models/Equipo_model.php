@@ -13,6 +13,10 @@ class Equipo_model extends ActiveRecord\Model
     return  $this->find('all');
   }
 
+  public function equipos($id){
+    return $this->find('all', array('e_div' => $id));
+  }
+
 }
 
  ?>

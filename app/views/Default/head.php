@@ -60,10 +60,14 @@
 	                    <ul class="dropdown-menu">
 	                      <li><a href="<?php echo URL.'Liga/estadisticas'; ?>">Jugadores</a></li>
 	                      <li><a href="<?php echo URL.'Liga/estadisticasEquipo'; ?>">Equipo</a></li>
-	                      <li><a href="#">Liga</a></li>
 	                    </ul>
 	                  </li>
 	                </ul>
+									<?php if(isset($_SESSION['Admin'])){ ?>
+										<ul class="nav navbar-nav navbar-left">
+			                <li><a href="<?php echo URL.'Usuario/cerrarSesion'; ?>">Cerrar Sesion</a></li>
+			              </ul>
+									<?php } ?>
 	            </div>
 	            <!-- /.navbar-collapse -->
 	        </div>

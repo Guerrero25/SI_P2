@@ -20,6 +20,9 @@
 	<!-- CSS Files -->
   <link href="<?php echo URL.APP_PATH.'views/'.DFT; ?>css/estilos.css" rel="stylesheet" />
 	<link href="<?php echo URL.APP_PATH.'views/'.DFT; ?>css/style.css" rel="stylesheet" />
+	<!-- jQuery -->
+	<script src="<?php echo URL.APP_PATH.'views/'.DFT; ?>js/jquery.js"></script>
+	<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.js"></script>
 
 </head>
 <body>
@@ -47,7 +50,7 @@
 	                  <li class="dropdown">
 	                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Liga<span class="caret"></span></a>
 	                    <ul class="dropdown-menu">
-	                      <li><a href="<?php echo URL.'public/Liga/posiciones'; ?>">General</a></li>
+	                      <li><a href="<?php echo URL.'public/Liga/general'; ?>">General</a></li>
 	                      <li><a href="<?php echo URL.'public/Liga/divisiones'; ?>">Divisiones</a></li>
 	                    </ul>
 	                  </li>

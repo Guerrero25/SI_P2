@@ -27,12 +27,9 @@
         </div>
     </footer>
 
-    <script src="<?php echo URL.APP_PATH.'views/'.DFT; ?>js/funciones.js" type="text/javascript">
+    <script src="<?php echo URL.APP_PATH.'views/'.DFT; ?>js/tablaJugadores.js" type="text/javascript"></script>
 
-    </script>
-
-    <!-- jQuery -->
-    <script src="<?php echo URL.APP_PATH.'views/'.DFT; ?>js/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.css">
 
     <!-- Bootstrap Core JavaScript -->
     <script src="<?php echo URL.APP_PATH.'views/'.DFT; ?>js/bootstrap.min.js"></script>

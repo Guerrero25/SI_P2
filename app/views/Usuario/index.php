@@ -11,7 +11,7 @@
                                 <a href="<?php echo URL.'public/Liga/partidos'; ?>" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Partidos</span></a>
                             </li>
                             <li>
-                                <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Posiciones</span></a>
+                                <a href="<?php echo URL.'public/Liga/general'; ?>" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Posiciones</span></a>
                             </li>
                         </ul>
                     </div>

@@ -18,7 +18,7 @@
   <form action="<?php echo URL.'public/Liga/estadisticasEquipo'; ?>" method="post">
     <div class="col-xs-12 col-sm-8 col-sm-offset-3 col-md-5 col-md-offset-4">
       <br />
-          <input style="visibility:hidden; display:none;"class="ocultar" type="text" value="Todos" name="todo" id="todo">
+          <input style="visibility:hidden; display:none;" class="ocultar" type="text" value="Todos" name="todo" id="todo">
           <button class="btn btn-primary btn-lg btn-block" type="submit">Todos los equipos</button>
     </div>
   </form>

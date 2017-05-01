@@ -10,7 +10,7 @@
   		$this->view->render($this, "partidos",$response);
   	}
 
-    public function posiciones(){
+    public function general(){
       $response = $this->model->ver_posiciones();
 
       $this->view->render($this, "posiciones", $response);
@@ -22,22 +22,8 @@
       $this->view->render($this, "divisiones", $response);
     }
 
-    public function estadisticas($id_div){
-      $response = $this->model->estadisticas($id_div);
-
-      $this->view->render($this,"estadisticas",$response);
-    }
-
-    public function jugador(){
-      $response = $this->model->datos_jugador();
-
-      $this->view->render($this,"jugador",$response);
-    }
-
-    public function equipo(){
-      $response = $this->model->datos_equipo();
-
-      $this->view->render($this,"equipo",$response);
+    public function estadisticas(){
+      $this->view->render($this,"estadisticas","");
     }
 
     public function estadisticasEquipo(){

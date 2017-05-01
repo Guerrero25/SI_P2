@@ -9,6 +9,7 @@
         <tr>
           <th class="text-center">Nombre</th>
           <th class="text-center">Posicion</th>
+          <th class="text-center">Equipo</th>
           <th class="text-center">Acciones</th>
         </tr>
       </thead>

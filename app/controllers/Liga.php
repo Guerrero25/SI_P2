@@ -27,16 +27,7 @@
     }
 
     public function estadisticasEquipo(){
-    if(isset($_POST['division'])){
-      $response = $this->model->equipos_division($_POST['division']);
-      $this->view->render($this,"estadisticasEquipo",$response);
-    }else if(isset($_POST['todo'])){
-      $response = $this->model->todos_equipos();
-      $this->view->render($this,"estadisticasEquipo",$response);
-    }else{
-      $response = $this->model->todos_equipos();
-      $this->view->render($this,"estadisticasEquipo",$response);
-    }
+      $this->view->render($this,"estadisticasEquipo","");
     }
   }
 

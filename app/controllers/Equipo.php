@@ -14,11 +14,24 @@ class Equipo extends Controller{
       if($response != null){
         $this->view->render($this,"equipo",$response);
       }else {
-        header("Location:".URL.'public/Usuario/index');
+        header("Location:".URL.'Usuario/index');
       }
 
     }
+  }
 
+  public function equipos(){
+    $response = $this->model->todos();
+
+    foreach ($response as $value) {
+      $ver = '<a class="btn btn-primary" href="../Equipo/detalles/'.$value->id.'">Ver</a>';
+      $data = $value->to_array();
+      $data['acciones'] = $ver;
+      $arreglo["data"][] = $data;
+
+    }
+
+    echo json_encode($arreglo);
   }
 }
 

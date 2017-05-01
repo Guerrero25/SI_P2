@@ -4,8 +4,10 @@
  */
 class Usuario_model extends ActiveRecord\Model{
 
-  function __construct(){
 
+  function login($usuario)
+  {
+    return $this::find('first', array('username' => $usuario));
   }
 }
  ?>

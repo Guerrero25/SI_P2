@@ -1,15 +1,14 @@
 $(document).ready(function() {
-	$('#jugadores').DataTable( {
+	$('#equipos').DataTable( {
 		"bDeferRender": true,
 		"sPaginationType": "full_numbers",
 		"ajax": {
-			"url": "../Jugador/jugadores",
+			"url": "../Equipo/equipos",
         	"type": "POST"
 		},
 		"columns": [
 			{ "data": "nombre" },
-			{ "data": "posicion" },
-			{"data": "equipo"},
+			{ "data": "e_div" },
       {"data": "acciones"}
 			],
 		"oLanguage": {

@@ -39,35 +39,27 @@
 	                    <span class="icon-bar"></span>
 	                    <span class="icon-bar"></span>
 	                </button>
-	                <a class="navbar-brand topnav" href="<?php echo URL.'public/' ?>">Inicio</a>
+	                <a class="navbar-brand topnav" href="<?php echo URL; ?>">Inicio</a>
 	            </div>
 	            <!-- Collect the nav links, forms, and other content for toggling -->
 	            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	              <ul class="nav navbar-nav navbar-left">
-	                <li><a href="<?php echo URL.'public/Liga/partidos'; ?>">Resultados recientes</a></li>
+	                <li><a href="<?php echo URL.'Liga/partidos'; ?>">Resultados recientes</a></li>
 	              </ul>
 	                <ul class="nav navbar-nav navbar-right">
 	                  <li class="dropdown">
 	                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Liga<span class="caret"></span></a>
 	                    <ul class="dropdown-menu">
-	                      <li><a href="<?php echo URL.'public/Liga/general'; ?>">General</a></li>
-	                      <li><a href="<?php echo URL.'public/Liga/divisiones'; ?>">Divisiones</a></li>
+	                      <li><a href="<?php echo URL.'Liga/general'; ?>">General</a></li>
+	                      <li><a href="<?php echo URL.'Liga/divisiones'; ?>">Divisiones</a></li>
 	                    </ul>
 	                  </li>
-	                  <li class="dropdown">
-	                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Divisiones<span class="caret"></span></a>
-	                    <ul class="dropdown-menu">
-	                      <li><a href="vistas/posiciones.html">Division 1</a></li>
-	                      <li><a href="vistas/posiciones.html">Division 2</a></li>
-	                      <li><a href="vistas/posiciones.html">Division 3</a></li>
-	                      <li><a href="vistas/posiciones.html">Division 4</a></li>
-	                    </ul>
-	                  </li>
+
 	                  <li class="dropdown">
 	                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Estadisticas<span class="caret"></span></a>
 	                    <ul class="dropdown-menu">
-	                      <li><a href="<?php echo URL.'public/Liga/estadisticas'; ?>">Jugadores</a></li>
-	                      <li><a href="<?php echo URL.'public/Liga/estadisticasEquipo'; ?>">Equipo</a></li>
+	                      <li><a href="<?php echo URL.'Liga/estadisticas'; ?>">Jugadores</a></li>
+	                      <li><a href="<?php echo URL.'Liga/estadisticasEquipo'; ?>">Equipo</a></li>
 	                      <li><a href="#">Liga</a></li>
 	                    </ul>
 	                  </li>

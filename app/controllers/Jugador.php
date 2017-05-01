@@ -14,7 +14,7 @@ class Jugador extends Controller{
       if($response != null){
         $this->view->render($this,"jugador",$response);
       }else {
-        header("Location:".URL.'public/Usuario/index');
+        header("Location:".URL.'Usuario/index');
       }
 
     }
@@ -26,8 +26,11 @@ class Jugador extends Controller{
 
     foreach ($response as $value) {
       $ver = '<a class="btn btn-primary" href="../Jugador/detalles/'.$value->id.'">Ver</a>';
+      $equipo = $this->model->nombre_equipo($value->id_equipo);
+      $equipo = $equipo[0]->nombre;
       $data = $value->to_array();
       $data['acciones'] = $ver;
+      $data['equipo'] = $equipo;
       $arreglo["data"][] = $data;
 
     }

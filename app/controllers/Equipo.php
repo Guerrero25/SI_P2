@@ -34,10 +34,15 @@ class Equipo extends Controller{
     echo json_encode($arreglo);
   }
 
-  public function equipos_division($id)
+  public function equipos_division()
   {
+    $id = $_POST['division'];
     $response = $this->model->equipos($id);
-    return $response;
+    foreach ($response as $value) {
+      $data = $value->to_array();
+      $arreglo[] = $data;
+    }
+    echo json_encode($arreglo);
   }
 }
 

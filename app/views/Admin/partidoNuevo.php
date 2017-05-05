@@ -77,10 +77,46 @@
   	  </div>
   	</div>
   	</header>
+    <br><br><br>
     <div class="container">
-      <?php foreach ($array as  $value) { ?>
-        <h4><?= $value->nombre ?></h4>
-      <?php } ?>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-5">
+          <select class="selectpicker" name="division" id="division">
+            <option value="1">Division 1</option>
+            <option value="2">Division 2</option>
+            <option value="3">Division 3</option>
+            <option value="4">Division 4</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <select class="selectpicker" name="equipoL" id="equipoL">
+
+          </select>
+        </div>
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-3">
+              <input type="number" name="mlocal" id="mlocal">
+            </div>
+            <div class="col-md-3">
+              <input type="number" name="mvisita" id="mvisita">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <select class="selectpicker" name="equipoV" id="equipoV">
+
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <button type="submit" name="button" class="btn btn-primary" id="guardar">Guardar Partido</button>
+          <a href="<?php echo URL.'Admin/index'; ?>" name="button" class="btn btn-danger">Cancelar</a>
+        </div>
+      </div>
     </div>
     <!-- Footer -->
         <footer>

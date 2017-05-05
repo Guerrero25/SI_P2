@@ -14,11 +14,9 @@
 
     }
 
-    public function nuevo_partido($id){
-      if(is_numeric($id)){
-        $response = file_get_contents(URL.'Equipo/equipos_division/'.$id);
-        $this->view->render2($this,"partidoNuevo", $response);
-      }
+    public function nuevo_partido(){
+      $this->view->render2($this,"partidoNuevo", "");
+
     }
 
   }

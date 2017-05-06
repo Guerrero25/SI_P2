@@ -40,6 +40,12 @@ class Jugador extends Controller{
 
     echo json_encode($arreglo);
   }
+
+  public function editar($id)
+  {
+    $response = $this->model->datos_jugador($id);
+    $this->view->render($this, "editarJugador", $response);
+  }
 }
 
  ?>

@@ -45,29 +45,33 @@ $(document).ready(function() {
       var mvisita = document.getElementById('mvisita').value;
       var fecha = $('input[name=fecha]').val();
 
-      $.ajax({
-        type: "post",
-        url: "../Partido/nuevo",
-        data: {local: local, mlocal: mlocal, visita: visita, mvisita: mvisita, fecha: fecha},
-        success: function(response) {
-          if (response == '1') {
-            $.ajax({
-              type: "post",
-              url: "../Equipo/actualizar",
-              data: {local: local, mlocal: mlocal, visita: visita, mvisita: mvisita},
-              success: function(response) {
-                alert(response);
+      if(mlocal == mvisita){
+        alert("Debe Haber Un Ganador!");
+      }else{
+        $.ajax({
+          type: "post",
+          url: "../Partido/nuevo",
+          data: {local: local, mlocal: mlocal, visita: visita, mvisita: mvisita, fecha: fecha},
+          success: function(response) {
+            if (response == '1') {
+              $.ajax({
+                type: "post",
+                url: "../Equipo/actualizar",
+                data: {local: local, mlocal: mlocal, visita: visita, mvisita: mvisita},
+                success: function(response) {
+                  alert(response);
+                }
+              });
+            }else{
+              if (response == '2') {
+                  alert('Ya jugaron 5 veces!');
+              } else {
+                  alert('Debe Llenar Todos Los Campos!');
               }
-            });
-          }else{
-            if (response == '2') {
-                alert('Ya jugaron 5 veces!');
-            } else {
-                alert('Debe Llenar Todos Los Campos!');
             }
           }
-        }
-      });
+        });
+      }
 
     });
 

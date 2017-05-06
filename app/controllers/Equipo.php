@@ -72,7 +72,9 @@ class Equipo extends Controller{
     $eqv = $this->model->equipo($visita);
 
     $eql->carreras = $eql->carreras + $mlocal;
+    $eql->permitidas = $eql->permitidas + $mvisita;
     $eqv->carreras = $eqv->carreras + $mvisita;
+    $eqv->permitidas = $eqv->permitidas + $mlocal;
 
     if($mlocal > $mvisita){
       $eql->p_win = $eql->p_win + 1;

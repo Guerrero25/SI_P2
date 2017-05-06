@@ -6,6 +6,7 @@
 				<h1 style="text-align:center;">Reultados recientes</h1><br/>
 			</div>
 		</div>
+		<?php if($array != ''){ ?>
     <?php foreach ($array as $value) { ?>
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3 bordes">
@@ -35,4 +36,7 @@
 	</div>
   <br>
   <?php } ?>
+	<?php }else{ ?>
+		<h4>No se ha jugado ningun partido todavia!</h4>
+	<?php } ?>
 	</section>

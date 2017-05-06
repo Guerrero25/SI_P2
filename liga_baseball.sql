@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-05-2017 a las 05:26:43
+-- Tiempo de generación: 06-05-2017 a las 19:07:05
 -- Versión del servidor: 5.6.25
 -- Versión de PHP: 5.6.11
 
@@ -23,26 +23,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `divisiones`
---
-
-CREATE TABLE IF NOT EXISTS `divisiones` (
-  `nombre` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `divisiones`
---
-
-INSERT INTO `divisiones` (`nombre`) VALUES
-('Red Box'),
-('Omar Gaming'),
-('Julian Prox'),
-('Mega Box');
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `equipo_models`
 --
 
@@ -51,6 +31,7 @@ CREATE TABLE IF NOT EXISTS `equipo_models` (
   `p_win` int(11) NOT NULL,
   `p_loss` int(11) NOT NULL,
   `carreras` int(11) NOT NULL,
+  `permitidas` int(11) NOT NULL,
   `id` int(11) NOT NULL,
   `e_div` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -59,23 +40,23 @@ CREATE TABLE IF NOT EXISTS `equipo_models` (
 -- Volcado de datos para la tabla `equipo_models`
 --
 
-INSERT INTO `equipo_models` (`nombre`, `p_win`, `p_loss`, `carreras`, `id`, `e_div`) VALUES
-('Red Box', 4, 2, 10, 1, 1),
-('Cartagenitos', 2, 4, 4, 2, 1),
-('Barbaros', 5, 1, 12, 3, 2),
-('Vikingos', 4, 2, 12, 4, 2),
-('Kolichas', 1, 6, 1, 5, 3),
-('Barecas', 0, 6, 1, 6, 3),
-('Tuburones', 6, 2, 10, 7, 4),
-('Caimanes', 3, 4, 8, 8, 4),
-('Real Madrid', 8, 0, 20, 9, 1),
-('Barcelona', 7, 1, 17, 10, 1),
-('Radiadors', 5, 3, 15, 11, 2),
-('Falcons', 4, 4, 12, 12, 2),
-('Shiguin', 6, 2, 14, 13, 3),
-('Boars', 7, 1, 15, 14, 3),
-('Mugiwaras', 8, 0, 16, 15, 4),
-('Shirohiges', 6, 2, 14, 16, 4);
+INSERT INTO `equipo_models` (`nombre`, `p_win`, `p_loss`, `carreras`, `permitidas`, `id`, `e_div`) VALUES
+('Maracaibo', 0, 1, 2, 4, 1, 1),
+('Cartagenitos', 1, 0, 4, 2, 2, 1),
+('Barbaros', 1, 0, 4, 2, 3, 2),
+('Vikingos', 0, 1, 2, 4, 4, 2),
+('Kolichas', 0, 1, 1, 2, 5, 3),
+('Barecas', 1, 0, 2, 1, 6, 3),
+('Tuburones', 0, 1, 1, 2, 7, 4),
+('Caimanes', 1, 0, 2, 1, 8, 4),
+('Real Madrid', 1, 0, 3, 2, 9, 1),
+('Barcelona', 0, 1, 2, 3, 10, 1),
+('Radiadors', 1, 0, 4, 2, 11, 2),
+('Falcons', 0, 1, 2, 4, 12, 2),
+('Shiguin', 1, 0, 4, 1, 13, 3),
+('Boars', 0, 1, 1, 4, 14, 3),
+('Mugiwaras', 1, 0, 6, 2, 15, 4),
+('Shirohiges', 0, 1, 2, 6, 16, 4);
 
 -- --------------------------------------------------------
 
@@ -101,18 +82,8 @@ CREATE TABLE IF NOT EXISTS `jugador_models` (
 --
 
 INSERT INTO `jugador_models` (`id`, `id_equipo`, `nombre`, `posicion`, `edad`, `nacionalidad`, `t_bate`, `hits`, `carreras_limpias`, `innings_lanzados`) VALUES
-(1, 1, 'Omar Guerrero', 'Lanzador', 20, 'Colombia', 20, 10, 2, 20),
+(1, 2, 'Omar Guerrero', 'Lanzador', 20, 'Colombia', 20, 12, 3, 21),
 (2, 3, 'David Jimenez', 'Bateador', 25, 'Colombia', 22, 9, 0, 0);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `liga_models`
---
-
-CREATE TABLE IF NOT EXISTS `liga_models` (
-  `id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -127,18 +98,21 @@ CREATE TABLE IF NOT EXISTS `partido_models` (
   `m_visita` int(11) NOT NULL,
   `fecha` date NOT NULL,
   `id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `partido_models`
 --
 
 INSERT INTO `partido_models` (`local`, `visita`, `m_local`, `m_visita`, `fecha`, `id`) VALUES
-('Red Sox', 'Cartagenitos', 6, 5, '2017-04-12', 1),
-('Barbaros', 'Vikingos', 4, 6, '2017-04-12', 2),
-('Kolichas', 'Barecas', 2, 1, '2017-04-05', 3),
-('Vikingos', 'Barbaros', 2, 1, '2017-05-04', 6),
-('Mugiwaras', 'Shirohiges', 5, 3, '2017-05-04', 7);
+('Maracaibo', 'Cartagenitos', 2, 4, '2017-06-05', 7),
+('Real Madrid', 'Barcelona', 3, 2, '2017-06-05', 8),
+('Barbaros', 'Vikingos', 4, 2, '2017-06-05', 9),
+('Radiadors', 'Falcons', 4, 2, '2017-06-05', 10),
+('Kolichas', 'Barecas', 1, 2, '2017-06-05', 11),
+('Shiguin', 'Boars', 4, 1, '2017-06-05', 12),
+('Tuburones', 'Caimanes', 1, 2, '2017-06-05', 13),
+('Mugiwaras', 'Shirohiges', 6, 2, '2017-06-05', 14);
 
 -- --------------------------------------------------------
 
@@ -195,7 +169,7 @@ ALTER TABLE `usuario_models`
 -- AUTO_INCREMENT de la tabla `partido_models`
 --
 ALTER TABLE `partido_models`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

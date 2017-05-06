@@ -47,6 +47,9 @@
 	                <li><a href="<?php echo URL.'Liga/partidos'; ?>">Resultados recientes</a></li>
 	              </ul>
 	                <ul class="nav navbar-nav navbar-right">
+										<?php if(isset($_SESSION['Admin'])){ ?>
+											<li class="dropdown"><a href="<?php echo URL.'Admin/nuevo_partido'; ?>">Nuevo Partido</a></li>
+										<?php } ?>
 	                  <li class="dropdown">
 	                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Liga<span class="caret"></span></a>
 	                    <ul class="dropdown-menu">

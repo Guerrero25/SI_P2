@@ -26,7 +26,7 @@ $(document).ready(function() {
       var division = document.getElementById('division').value;
       $.ajax({
         type: "post",
-        url: "../../Equipo/equipos_division",
+        url: "../Equipo/equipos_division",
         data: {division: division},
         success: function(response) {
           response = $.parseJSON(response);
@@ -46,14 +46,24 @@ $(document).ready(function() {
 
       $.ajax({
         type: "post",
-        url: "../../Partido/nuevo",
+        url: "../Partido/nuevo",
         data: {local: local, mlocal: mlocal, visita: visita, mvisita: mvisita},
         success: function(response) {
           if (response == '1') {
-            alert('Registro Exitoso!');
-            location.href = '../Admin/index';
+            $.ajax({
+              type: "post",
+              url: "../Equipo/actualizar",
+              data: {local: local, mlocal: mlocal, visita: visita, mvisita: mvisita},
+              success: function(response) {
+                alert(response);
+              }
+            });
           }else{
-            alert('Ya jugaron 5 veces!');
+            if (response == '2') {
+                alert('Ya jugaron 5 veces!');
+            } else {
+                alert('Debe Llenar Todos Los Campos!');
+            }
           }
         }
       });

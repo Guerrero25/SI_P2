@@ -9,6 +9,11 @@ class Equipo_model extends ActiveRecord\Model
     return $this->find('first', array('id' => $id ));
   }
 
+  public function equipo($equipo)
+  {
+    return $this->find('first', array('conditions' => array('nombre = ?', $equipo)));
+  }
+
   public function todos(){
     return  $this->find('all');
   }

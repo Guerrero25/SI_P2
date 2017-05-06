@@ -44,7 +44,7 @@
 	            <!-- Collect the nav links, forms, and other content for toggling -->
 	            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	              <ul class="nav navbar-nav navbar-left">
-	                <li><a href="<?php echo URL.'Liga/partidos'; ?>">Resultados recientes</a></li>
+	                <li><a href="<?php echo URL.'Partido/partidos'; ?>">Resultados recientes</a></li>
 	              </ul>
 	                <ul class="nav navbar-nav navbar-right">
 										<?php if(isset($_SESSION['Admin'])){ ?>
@@ -53,16 +53,16 @@
 	                  <li class="dropdown">
 	                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Liga<span class="caret"></span></a>
 	                    <ul class="dropdown-menu">
-	                      <li><a href="<?php echo URL.'Liga/general'; ?>">General</a></li>
-	                      <li><a href="<?php echo URL.'Liga/divisiones'; ?>">Divisiones</a></li>
+	                      <li><a href="<?php echo URL.'Equipo/general'; ?>">General</a></li>
+	                      <li><a href="<?php echo URL.'Equipo/divisiones'; ?>">Divisiones</a></li>
 	                    </ul>
 	                  </li>
 
 	                  <li class="dropdown">
 	                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Estadisticas<span class="caret"></span></a>
 	                    <ul class="dropdown-menu">
-	                      <li><a href="<?php echo URL.'Liga/estadisticas'; ?>">Jugadores</a></li>
-	                      <li><a href="<?php echo URL.'Liga/estadisticasEquipo'; ?>">Equipo</a></li>
+	                      <li><a href="<?php echo URL.'Jugador/estadisticas'; ?>">Jugadores</a></li>
+	                      <li><a href="<?php echo URL.'Equipo/estadisticasEquipo'; ?>">Equipo</a></li>
 	                    </ul>
 	                  </li>
 	                </ul>

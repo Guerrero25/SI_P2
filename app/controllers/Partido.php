@@ -4,6 +4,11 @@
  */
 class Partido extends Controller
 {
+  public function partidos(){
+    $response = $this->model->ver_partidos();
+
+    $this->view->render($this, "partidos",$response);
+  }
 
   public function nuevo()
   {

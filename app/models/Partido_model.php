@@ -13,6 +13,10 @@ class Partido_model extends ActiveRecord\Model
     $atributos = array('local' => $local, 'visita' => $visita, 'm_local' => $mlocal, 'm_visita' => $mvisita, 'fecha' => $fecha);
     $this->create($atributos);
   }
+
+  function ver_partidos(){
+    return $this->find('all', array('order' => 'fecha DESC'));
+  }
 }
 
 

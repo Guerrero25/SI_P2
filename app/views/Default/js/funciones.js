@@ -70,4 +70,23 @@ $(document).ready(function() {
       });
 
     });
+
+    $('#editar').click(function() {
+      var hits = $('input[id=hits]').val();
+      var turnos = $('input[id=turnos]').val();
+      var limpias = $('input[id=limpias]').val();
+      var inning = $('input[id=inning]').val();
+      var id = $('input[name=id]').val();
+
+      $.ajax({
+        type: "post",
+        url: "../../Jugador/actualizar",
+        data: {hits: hits, turnos: turnos, limpias: limpias, inning: inning, id: id},
+        success: function(response) {
+          alert(response);
+        }
+      });
+
+      console.log(hits+turnos+limpias+inning+id);
+    });
 });

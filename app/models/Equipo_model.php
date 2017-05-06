@@ -4,6 +4,9 @@
  */
 class Equipo_model extends ActiveRecord\Model
 {
+  function ver_posiciones(){
+    return $this->find('all',array('order' => 'p_win DESC, p_loss ASC'));
+  }
 
   function datos_equipo($id){
     return $this->find('first', array('id' => $id ));

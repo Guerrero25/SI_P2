@@ -8,6 +8,22 @@ class Equipo extends Controller{
     parent::__construct();
   }
 
+  public function general(){
+    $response = $this->model->ver_posiciones();
+
+    $this->view->render($this, "posiciones", $response);
+  }
+
+  public function divisiones(){
+    $response = $this->model->ver_posiciones();
+
+    $this->view->render($this, "divisiones", $response);
+  }
+
+  public function estadisticasEquipo(){
+    $this->view->render($this,"estadisticasEquipo","");
+  }
+
   public function detalles($id){
     if (is_numeric($id)) {
       $response = $this->model->datos_equipo($id);

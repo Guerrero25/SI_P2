@@ -8,6 +8,10 @@ class Jugador extends Controller{
     parent::__construct();
   }
 
+  public function estadisticas(){
+    $this->view->render($this,"estadisticas","");
+  }
+
   public function detalles($id){
     if (is_numeric($id)) {
       $response = $this->model->datos_jugador($id);
@@ -43,8 +47,37 @@ class Jugador extends Controller{
 
   public function editar($id)
   {
-    $response = $this->model->datos_jugador($id);
-    $this->view->render($this, "editarJugador", $response);
+    if(isset($_SESSION['Admin'])){
+      $response = $this->model->datos_jugador($id);
+      // $equipo = $this->model->nombre_equipo($response->id_equipo);
+      // settype($response->id_equipo,'integer');
+      // $response->id_equipo = $equipo->nombre;
+      $this->view->render($this, "editarJugador", $response);
+    }else{
+      header("Location:".URL);
+    }
+
+  }
+
+  public function actualizar()
+  {
+    if(isset($_POST['hits']) && isset($_POST['turnos']) && isset($_POST['inning']) && isset($_POST['limpias']) && isset($_POST['id'])){
+      $hits = $_POST['hits'];
+      $turnos = $_POST['turnos'];
+      $inning = $_POST['inning'];
+      $limpias = $_POST['limpias'];
+      $id = $_POST['id'];
+
+      $jugador = $this->model->datos_jugador($id);
+      $jugador->hits = $hits;
+      $jugador->t_bate = $turnos;
+      $jugador->carreras_limpias = $limpias;
+      $jugador->innings_lanzados = $inning;
+      $jugador->save();
+      echo "Actualizado Correctamente!";
+    }else{
+      echo "Debe Existir Datos!";
+    }
   }
 }
 

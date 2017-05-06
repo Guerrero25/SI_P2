@@ -14,9 +14,7 @@ class Jugador_model extends ActiveRecord\Model
 
   public function nombre_equipo($id)
   {
-    $sql = "SELECT * FROM equipo_models WHERE id='".$id."'";
-
-    return $this->find_by_sql($sql);
+    return $this::find('first', array('from' => 'equipo_models', 'conditions' => 'id = '.$id));
   }
 }
 

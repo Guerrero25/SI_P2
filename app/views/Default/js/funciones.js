@@ -43,11 +43,12 @@ $(document).ready(function() {
       var visita = document.getElementById('equipoV').value;
       var mlocal = document.getElementById('mlocal').value;
       var mvisita = document.getElementById('mvisita').value;
+      var fecha = $('input[name=fecha]').val();
 
       $.ajax({
         type: "post",
         url: "../Partido/nuevo",
-        data: {local: local, mlocal: mlocal, visita: visita, mvisita: mvisita},
+        data: {local: local, mlocal: mlocal, visita: visita, mvisita: mvisita, fecha: fecha},
         success: function(response) {
           if (response == '1') {
             $.ajax({

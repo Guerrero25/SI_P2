@@ -30,7 +30,7 @@ class Jugador extends Controller{
         $edit = ' <a class="btn btn-danger" href="../Jugador/editar/'.$value->id.'">Editar</a>';
       }
       $equipo = $this->model->nombre_equipo($value->id_equipo);
-      $equipo = $equipo[0]->nombre;
+      $equipo = $equipo->nombre;
       $data = $value->to_array();
       $data['acciones'] = $ver.$edit;
       $data['equipo'] = $equipo;

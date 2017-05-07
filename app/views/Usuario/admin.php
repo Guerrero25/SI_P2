@@ -3,7 +3,9 @@
 	    	<div class="section landing-section" id="sesion">
 	      	<div class="row">
 	        	<div class="col-md-8 col-md-offset-2">
+							<div style="height:100px" class="col-md-12"></div>
 	          	<h2 class="text-center title">Iniciar Sesión</h2>
+							<div style="height:20px" class="col-md-12"></div>
 	            <form class="contact-form" role="form" id="Sesion" name="Sesion">
 	            	<div class="row">
 	              	<div class="col-md-6 col-md-offset-3">

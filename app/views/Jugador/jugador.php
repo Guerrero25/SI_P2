@@ -46,7 +46,7 @@
           <tr>
             <td class="text-center"><?= $array->hits ?></td>
             <td class="text-center"><?= $array->t_bate ?></td>
-            <td class="text-center"><?= $array->t_bate/$array->hits ?></td>
+            <td class="text-center"><?= $array->hits/$array->t_bate ?></td>
             <?php if($array->posicion == 'Lanzador'){ ?>
               <td class="text-center"><?= $array->carreras_limpias ?></td>
               <td class="text-center"><?= $array->innings_lanzados ?></td>

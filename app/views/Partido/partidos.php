@@ -26,7 +26,8 @@
             </div>
           </div>
 
-					<h5><?= $value->fecha  ?></h5>
+					<h5><?= date_format($value->fecha,'d/m/y')  ?></h5>
+					<h4><?= $value->estadio ?></h4>
 				</div>
 				<div class="col-md-1">
 					<img src="<?php echo URL.APP_PATH.'views/'.DFT;?>img/escudo.png" align="right" width="60px" height="60px">

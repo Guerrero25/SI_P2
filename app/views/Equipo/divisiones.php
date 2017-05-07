@@ -28,8 +28,8 @@
               <td><?= $value->p_loss ?></td>
               <td><?= $value->p_win/($value->p_loss + $value->p_win) ?></td>
               <td><?= $value->carreras ?></td>
-              <td>0.70</td>
-              <th>+7</th>
+              <td><?= $value->permitidas ?></td>
+              <th><?= ($value->carreras > $value->permitidas)? '+':''?> <?= $value->carreras - $value->permitidas ?></th>
             </tr>
               <?php } ?>
           <?php } ?>
@@ -62,8 +62,8 @@
               <td><?= $value->p_loss ?></td>
               <td><?= $value->p_win/($value->p_loss + $value->p_win) ?></td>
               <td><?= $value->carreras ?></td>
-              <td>0.70</td>
-              <th>+7</th>
+              <td><?= $value->permitidas ?></td>
+              <th><?= ($value->carreras > $value->permitidas)? '+':''?> <?= $value->carreras - $value->permitidas ?></th>
             </tr>
               <?php } ?>
           <?php } ?>
@@ -98,8 +98,8 @@
               <td><?= $value->p_loss ?></td>
               <td><?= $value->p_win/($value->p_loss + $value->p_win) ?></td>
               <td><?= $value->carreras ?></td>
-              <td>0.70</td>
-              <th>+7</th>
+              <td><?= $value->permitidas ?></td>
+              <th><?= ($value->carreras > $value->permitidas)? '+':''?> <?= $value->carreras - $value->permitidas ?></th>
             </tr>
               <?php } ?>
           <?php } ?>
@@ -132,8 +132,8 @@
               <td><?= $value->p_loss ?></td>
               <td><?= $value->p_win/($value->p_loss + $value->p_win) ?></td>
               <td><?= $value->carreras ?></td>
-              <td>0.70</td>
-              <th>+7</th>
+              <td><?= $value->permitidas ?></td>
+              <th><?= ($value->carreras > $value->permitidas)? '+':''?> <?= $value->carreras - $value->permitidas ?></th>
             </tr>
               <?php } ?>
           <?php } ?>

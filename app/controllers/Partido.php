@@ -21,8 +21,9 @@ class Partido extends Controller
 
       $response = $this->model->jugados($local,$visita);
       $response2 = $this->model->jugados($visita, $local);
+      $estadio = $response->estadio;
       if ($response == '' && $response2 == '') {
-        $this->model->crear($local,$visita,$mlocal,$mvisita,$fecha);
+        $this->model->crear($local,$visita,$mlocal,$mvisita,$fecha,$estadio);
         echo '1';
       }else{
         if($response != '' && $response2 != ''){

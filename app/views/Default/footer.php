@@ -1,30 +1,27 @@
 
 <!-- Footer -->
     <footer>
+      <div id="footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-md-12">
+                  <div class="col-md-6 col-md-offset-3">
+                    <h5>Seguridad Informatica</h5>
                     <ul class="list-inline">
                         <li>
-                            <a href="<?= URL ?>">Home</a>
+                            Omar Guerrero
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <a href="#about">About</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#services">Services</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#contact">Contact</a>
+                            Julian Martinez
                         </li>
                     </ul>
                     <p class="copyright text-muted small">Copyright &copy; Liga de Beisbol del Caribe 2017. All Rights Reserved</p>
+                  </div>
                 </div>
             </div>
         </div>
+      </div>
     </footer>
 
     <script src="<?php echo URL.APP_PATH.'views/'.DFT; ?>js/tablaJugadores.js" type="text/javascript"></script>

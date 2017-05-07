@@ -75,6 +75,58 @@ $(document).ready(function() {
 
     });
 
+    $("#hits").change(function() {
+      var hits = document.getElementById('hits').value;
+      var turnos = document.getElementById('turnos').value;
+      $( "#mostrar" ).empty();
+      if(hits==0||turnos==0){
+        $( "#mostrar" ).append("Promedio de bateo: "+0 )
+      }else{
+        var pro_bateo = hits/turnos;
+        var dec = pro_bateo.toFixed(3);
+        $( "#mostrar" ).append("Promedio de bateo: "+dec )
+      }
+    });
+
+    $("#turnos").change(function() {
+      var hits = document.getElementById('hits').value;
+      var turnos = document.getElementById('turnos').value;
+      $( "#mostrar" ).empty();
+      if(hits==0||turnos==0){
+        $( "#mostrar" ).append("Promedio de bateo: "+0 )
+      }else{
+        var pro_bateo = hits/turnos;
+        var dec = pro_bateo.toFixed(3);
+        $( "#mostrar" ).append("Promedio de bateo: "+dec )
+      }
+    });
+
+    $("#limpias").change(function() {
+      var limpias = document.getElementById('limpias').value;
+      var inning = document.getElementById('inning').value;
+      $( "#mostrar2" ).empty();
+      if(inning==0||limpias==0){
+        $( "#mostrar2" ).append("Efectividad: "+0 )
+      }else{
+        var efec = ((limpias)/(inning))*9;
+        var dec = efec.toFixed(3);
+        $( "#mostrar2" ).append("Efectividad: "+dec )
+      }
+    });
+
+    $("#inning").change(function() {
+      var limpias = document.getElementById('limpias').value;
+      var inning = document.getElementById('inning').value;
+      $( "#mostrar2" ).empty();
+      if(inning==0||limpias==0){
+        $( "#mostrar2" ).append("Efectividad: "+0 )
+      }else{
+        var efec = ((limpias)/(inning))*9;
+        var dec = efec.toFixed(3);
+        $( "#mostrar2" ).append("Efectividad: "+dec )
+      }
+    });
+
     $('#editar').click(function() {
       var hits = $('input[id=hits]').val();
       var turnos = $('input[id=turnos]').val();

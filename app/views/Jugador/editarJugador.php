@@ -32,6 +32,9 @@
       <div class="col-md-3">
         <label for="turnos">Turnos: </label><input class="form-control" type="number" min="1" max="1000" value="<?= $array->t_bate  ?>" id="turnos">
       </div>
+      <div class="text-center col-md-12">
+        <h1 id="mostrar"></h1>
+      </div>
       <div style="height:30px" class="col-md-12"><br></div>
       <?php if($array->posicion == "Lanzador"){ ?>
       <div class="col-md-3 col-md-offset-3">
@@ -39,6 +42,9 @@
       </div>
       <div class="col-md-3">
         <label for="inning">Innings Lanzados: </label><input class="form-control" type="number" min="0" max="100" value="<?= ($array->posicion == "Lanzador")? $array->innings_lanzados : 0 ?>" id="inning">
+      </div>
+      <div class="text-center col-md-12">
+        <h1 id="mostrar2"></h1>
       </div>
       <?php } ?>
       <div style="height:30px" class="col-md-12"><br></div>

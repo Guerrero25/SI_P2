@@ -20,7 +20,7 @@ $(document).ready(function() {
 				return false;
 		});
 
-    $("#division").change(function() {
+    $("#division").bind("change focus",function() {
       $('#equipoL').find('option').remove();
       $('#equipoV').find('option').remove();
       var division = document.getElementById('division').value;
@@ -38,6 +38,16 @@ $(document).ready(function() {
       });
     });
 
+    $("#division").focus();
+    $('#equipoL').change(function() {
+      var equipo = document.getElementById('equipoL').value;
+      $('#equipoV').find('option[value="'+equipo+'"]').remove();
+    });
+    $('#equipoV').change(function() {
+      var equipo = document.getElementById('equipoL').value;
+      $('#equipoV').find('option[value="'+equipo+'"]').remove();
+    });
+
     $('#guardar').click(function() {
       var local = document.getElementById('equipoL').value;
       var visita = document.getElementById('equipoV').value;
@@ -45,8 +55,8 @@ $(document).ready(function() {
       var mvisita = document.getElementById('mvisita').value;
       var fecha = $('input[name=fecha]').val();
 
-      if(mlocal == mvisita){
-        alert("Debe Haber Un Ganador!");
+      if((mlocal == mvisita) || (local == visita)){
+        alert("Partido invalido!");
       }else{
         $.ajax({
           type: "post",

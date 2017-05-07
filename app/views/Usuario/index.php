@@ -8,10 +8,10 @@
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
                             <li>
-                                <a href="<?php echo URL.'Partido/partidos'; ?>" class="btn btn-default btn-lg"><i class="fa fa-twitter"></i> <span class="network-name">Partidos</span></a>
+                                <a href="<?php echo URL.'Partido/partidos'; ?>" class="btn btn-default btn-lg"> <span class="network-name">Partidos</span></a>
                             </li>
                             <li>
-                                <a href="<?php echo URL.'Equipo/general'; ?>" class="btn btn-default btn-lg"><i class="fa fa-github"></i> <span class="network-name">Posiciones</span></a>
+                                <a href="<?php echo URL.'Equipo/general'; ?>" class="btn btn-default btn-lg"><span class="network-name">Posiciones</span></a>
                             </li>
                         </ul>
                     </div>

@@ -17,6 +17,12 @@ class Partido_model extends ActiveRecord\Model
   function ver_partidos(){
     return $this->find('all', array('order' => 'fecha DESC'));
   }
+
+  function estadio($equipo)
+  {
+    $m = $this->first(array('from' => 'equipo_models', 'conditions' => array('nombre = ?', $equipo)));
+    return $m->estadio;
+  }
 }
 
 
